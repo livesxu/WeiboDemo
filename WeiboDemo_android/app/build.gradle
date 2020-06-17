@@ -43,6 +43,7 @@ dependencies {
     //添加flutter依赖
     implementation project(':flutter')
 
+    implementation 'org.greenrobot:eventbus:3.2.0'
 
 }
 

@@ -5,5 +5,3 @@ evaluate(new File(                                                      // new
         settingsDir.parentFile,                                               // new
         'flutter_module_weibo_login/.android/include_flutter.groovy'                          // new
 ))
-include ':flutter_module_weibo_login'
-project(':flutter_module_weibo_login').projectDir = new File('../flutter_module_weibo_login')

@@ -1,14 +1,14 @@
 package com.example.weibodemo;
 
 import androidx.appcompat.app.AppCompatActivity;
-import io.flutter.app.FlutterActivity;
-import io.flutter.embedding.engine.FlutterEngine;
-import io.flutter.embedding.engine.FlutterEngineCache;
+import io.flutter.embedding.android.FlutterActivity;
 
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.weibodemo.databinding.ActivityMainBinding;
+
+import org.greenrobot.eventbus.EventBus;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(FlutterEngineCache.getInstance().get("123").);
+                startActivity(FlutterActivity.withCachedEngine("weibo_engine").build(MainActivity.this));
 
+                EventBus.getDefault().post(new WeiboLoginEvent());
             }
         });
     }

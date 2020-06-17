@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:dio/dio.dart';
+import 'package:fluttermoduleweibologin/channel_redux/channel_action.dart';
+import 'package:fluttermoduleweibologin/channel_redux/channel_state.dart';
 
 import 'dart:async';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'weibo_account.dart';
+
+import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 //iOS info.plist需添加
 //<key>io.flutter.embedded_views_preview</key><true/>
@@ -70,7 +74,8 @@ class _WeiboLoginState extends State<WeiboLogin> {
     print(response.data);
     if (response.statusCode == 200) {
 
-      WeiboAccount.analysisInfo(response.data);
+      Store<ChannelState> state = StoreProvider.of(context);
+      state.dispatch(WeiboLoginSuccessAction(info:response.data));
 
       Navigator.of(context).pop({"success":true});
     }

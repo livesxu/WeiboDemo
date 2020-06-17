@@ -29,7 +29,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   dio:
   webview_flutter:
-  shared_preferences:
+  shared_preferences: ^0.5.7+3
+  flutter_redux: ^0.6.0
 
 dev_dependencies:
   flutter_test:
