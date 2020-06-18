@@ -9,6 +9,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.Map;
 
+import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.FlutterEngineCache;
 import io.flutter.embedding.engine.dart.DartExecutor;
@@ -85,6 +86,8 @@ public class MainAplication extends Application {
                         Log.v("weibo","Native get access_token with mothod channel:" + access_token);
 
                         result.success(null);
+
+                        EventBus.getDefault().post(new WeiboDismissEvent(access_token));
                     }
                 }
             });

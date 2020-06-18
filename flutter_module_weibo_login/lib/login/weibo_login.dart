@@ -28,7 +28,7 @@ class _WeiboLoginState extends State<WeiboLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("微博授权登录"),leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.of(context).pop({"success":false});}),),
+      appBar: AppBar(title: Text("微博授权登录")),
       body: Builder(builder: (BuildContext context) {
         return WebView(
           initialUrl: "https://open.weibo.cn/oauth2/authorize?client_id=1791529406&display=mobile&redirect_uri=https://api.weibo.com/oauth2/default.html&response_type=code",
@@ -77,7 +77,10 @@ class _WeiboLoginState extends State<WeiboLogin> {
       Store<ChannelState> state = StoreProvider.of(context);
       state.dispatch(WeiboLoginSuccessAction(info:response.data));
 
-      Navigator.of(context).pop({"success":true});
+      if (Navigator.of(context).canPop()) {
+
+        Navigator.of(context).pop({"success":true});
+      }
     }
   }
 }
