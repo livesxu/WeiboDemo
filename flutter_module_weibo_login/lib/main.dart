@@ -7,17 +7,17 @@ import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:fluttermoduleweibologin/login/weibo_login.dart';
 
-void main() {
+void main() async {
 
 //  If you're running an application and need to access the binary messenger before `runApp()` has been called (for example, during plugin initialization),
 //  then you need to explicitly call the `WidgetsFlutterBinding.ensureInitialized()` first.
   WidgetsFlutterBinding.ensureInitialized();
 
-  WeiboAccount.readInfo(null);
+  await WeiboAccount.readInfo(null);
 
   Store store = Store<ChannelState>(channelReducer,initialState: ChannelState(
-      weiboMethodChannel: MethodChannel("weibo"),
-      weiboEventChannel: EventChannel("weibo")
+      weiboMethodChannel: MethodChannel("weibo_method"),
+      weiboEventChannel: EventChannel("weibo_event")
   ));
 
   runApp(MyApp(store: store,));

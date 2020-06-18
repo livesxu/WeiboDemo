@@ -18,9 +18,13 @@ class ChannelState {
         access_tokenMap = {"access_token":WeiboAccount.share.access_token};
       }
 
+      //由 Native 通知做某件事
       this.weiboEventChannel.receiveBroadcastStream(access_tokenMap).listen((value){
 
+        if ((value is String)) {
 
+
+        }
       });
     }
   }

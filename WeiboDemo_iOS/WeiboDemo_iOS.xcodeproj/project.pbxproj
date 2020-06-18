@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		737952FEDF8AAEBFBDF57EFA /* Pods_WeiboDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC11B5AF6E9FC21E5FB9432 /* Pods_WeiboDemo_iOS.framework */; };
 		E19697D62496651F002B4CB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E19697D52496651F002B4CB0 /* AppDelegate.m */; };
 		E19697D92496651F002B4CB0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E19697D82496651F002B4CB0 /* SceneDelegate.m */; };
 		E19697DC2496651F002B4CB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19697DB2496651F002B4CB0 /* ViewController.m */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2131AA308FC646542B2AF875 /* Pods-WeiboDemo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemo_iOS.release.xcconfig"; path = "Target Support Files/Pods-WeiboDemo_iOS/Pods-WeiboDemo_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		2BC11B5AF6E9FC21E5FB9432 /* Pods_WeiboDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeiboDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D334D5021FAEA3C402E12818 /* Pods-WeiboDemo_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiboDemo_iOS.debug.xcconfig"; path = "Target Support Files/Pods-WeiboDemo_iOS/Pods-WeiboDemo_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E19697D12496651F002B4CB0 /* WeiboDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19697D42496651F002B4CB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E19697D52496651F002B4CB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737952FEDF8AAEBFBDF57EFA /* Pods_WeiboDemo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		837CAE28CF587C332398021E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BC11B5AF6E9FC21E5FB9432 /* Pods_WeiboDemo_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D837FD938AF02AB13572BC60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D334D5021FAEA3C402E12818 /* Pods-WeiboDemo_iOS.debug.xcconfig */,
+				2131AA308FC646542B2AF875 /* Pods-WeiboDemo_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E19697C82496651F002B4CB0 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +111,8 @@
 				E19697EF24966522002B4CB0 /* WeiboDemo_iOSTests */,
 				E19697FA24966522002B4CB0 /* WeiboDemo_iOSUITests */,
 				E19697D22496651F002B4CB0 /* Products */,
+				D837FD938AF02AB13572BC60 /* Pods */,
+				837CAE28CF587C332398021E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E196980024966522002B4CB0 /* Build configuration list for PBXNativeTarget "WeiboDemo_iOS" */;
 			buildPhases = (
+				547F7E94361BC2A30D6B0BEA /* [CP] Check Pods Manifest.lock */,
+				9FC3BBB34F9E1457303F4326 /* [CP-User] Run Flutter Build Script */,
 				E19697CD2496651F002B4CB0 /* Sources */,
 				E19697CE2496651F002B4CB0 /* Frameworks */,
 				E19697CF2496651F002B4CB0 /* Resources */,
+				36CE7D7A4F96762785FB93EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +289,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36CE7D7A4F96762785FB93EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo_iOS/Pods-WeiboDemo_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo_iOS/Pods-WeiboDemo_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo_iOS/Pods-WeiboDemo_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		547F7E94361BC2A30D6B0BEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeiboDemo_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC3BBB34F9E1457303F4326 /* [CP-User] Run Flutter Build Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../flutter_module_weibo_login/.metadata",
+				"${SRCROOT}/../flutter_module_weibo_login/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/../flutter_module_weibo_login/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/../flutter_module_weibo_login/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module_weibo_login/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E19697CD2496651F002B4CB0 /* Sources */ = {
@@ -437,6 +523,7 @@
 		};
 		E196980124966522002B4CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D334D5021FAEA3C402E12818 /* Pods-WeiboDemo_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +540,7 @@
 		};
 		E196980224966522002B4CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2131AA308FC646542B2AF875 /* Pods-WeiboDemo_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

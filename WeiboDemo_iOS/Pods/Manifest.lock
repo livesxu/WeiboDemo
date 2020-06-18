@@ -1,0 +1,54 @@
+PODS:
+  - Flutter (1.0.0)
+  - fluttermoduleweibologin (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - shared_preferences
+    - webview_flutter
+  - shared_preferences (0.0.1):
+    - Flutter
+  - shared_preferences_macos (0.0.1):
+    - Flutter
+  - shared_preferences_web (0.0.1):
+    - Flutter
+  - webview_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../flutter_module_weibo_login/.ios/Flutter/engine`)
+  - fluttermoduleweibologin (from `../flutter_module_weibo_login/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../flutter_module_weibo_login/.ios/Flutter/FlutterPluginRegistrant`)
+  - shared_preferences (from `../flutter_module_weibo_login/.ios/Flutter/.symlinks/shared_preferences/ios`)
+  - shared_preferences_macos (from `../flutter_module_weibo_login/.ios/Flutter/.symlinks/shared_preferences_macos/ios`)
+  - shared_preferences_web (from `../flutter_module_weibo_login/.ios/Flutter/.symlinks/shared_preferences_web/ios`)
+  - webview_flutter (from `../flutter_module_weibo_login/.ios/Flutter/.symlinks/webview_flutter/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../flutter_module_weibo_login/.ios/Flutter/engine"
+  fluttermoduleweibologin:
+    :path: "../flutter_module_weibo_login/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../flutter_module_weibo_login/.ios/Flutter/FlutterPluginRegistrant"
+  shared_preferences:
+    :path: "../flutter_module_weibo_login/.ios/Flutter/.symlinks/shared_preferences/ios"
+  shared_preferences_macos:
+    :path: "../flutter_module_weibo_login/.ios/Flutter/.symlinks/shared_preferences_macos/ios"
+  shared_preferences_web:
+    :path: "../flutter_module_weibo_login/.ios/Flutter/.symlinks/shared_preferences_web/ios"
+  webview_flutter:
+    :path: "../flutter_module_weibo_login/.ios/Flutter/.symlinks/webview_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  fluttermoduleweibologin: 650c4f1a6f48fcbc6794d10735093b7c63dc84d4
+  FlutterPluginRegistrant: 3c90fdc6fb1946a7939e48f8dc1df4e169368e04
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087
+  shared_preferences_web: 141cce0c3ed1a1c5bf2a0e44f52d31eeb66e5ea9
+  webview_flutter: bec7599de6bfbe8008a739aa3ebd7b364ea9d0cd
+
+PODFILE CHECKSUM: 95793297463685e631ffdd6263b926c9e4a64906
+
+COCOAPODS: 1.9.0

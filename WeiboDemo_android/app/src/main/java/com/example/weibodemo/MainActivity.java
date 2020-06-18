@@ -2,6 +2,8 @@ package com.example.weibodemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import io.flutter.embedding.android.FlutterActivity;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.FlutterEngineCache;
 
 import android.os.Bundle;
 import android.view.View;
