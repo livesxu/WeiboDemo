@@ -43,6 +43,14 @@ dependencies {
     //添加flutter依赖
     implementation project(':flutter')
 
+//   传值 https://github.com/greenrobot/EventBus
     implementation 'org.greenrobot:eventbus:3.2.0'
 
+//  json解析  https://github.com/google/gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+//   解耦 https://github.com/google/dagger
+    implementation 'com.google.dagger:dagger:2.11-rc2'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11-rc2'
 }

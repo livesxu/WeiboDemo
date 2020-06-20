@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".WeiboHome.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,7 @@
             android:hardwareAccelerated="true"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".WeiboFlutterActivity"></activity>
+        <activity android:name=".WeiboLogin.WeiboFlutterActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

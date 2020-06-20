@@ -1,7 +1,14 @@
 package com.example.weibodemo;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
+
+import com.example.weibodemo.WeiboLogin.WeiboAccount;
+import com.example.weibodemo.WeiboLogin.WeiboDismissEvent;
+import com.example.weibodemo.WeiboLogin.WeiboLoginEvent;
+import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -9,7 +16,6 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.Map;
 
-import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.FlutterEngineCache;
 import io.flutter.embedding.engine.dart.DartExecutor;
@@ -60,6 +66,16 @@ public class MainAplication extends Application {
                         if (!access_token.isEmpty()) {
 
                             Log.v("weibo","Native get access_token with first event channel:" + access_token);
+                            //也可以直接从SharedPreferences中拿值,先拿到flutter使用的SharedPreferences然后取值
+                            SharedPreferences sharedPreferences = getSharedPreferences("FlutterSharedPreferences", Context.MODE_PRIVATE);
+                            Map map = sharedPreferences.getAll();
+                            String jsonInfo = (String)map.get("flutter.weibo_account");
+                            Gson gson = new Gson();
+                            WeiboAccount account = gson.fromJson(jsonInfo,WeiboAccount.class);
+                            WeiboAccount.getInstance().setAccess_token(account.getAccess_token());
+                            WeiboAccount.getInstance().setExpires_in(account.getExpires_in());
+                            WeiboAccount.getInstance().setUid(account.getUid());
+                            Log.v("weibo","flutter在SharedPreferences中存的值：" + map.toString());
                         } else {
                             Log.v("weibo","Native have not init access_token yet.");
                         }

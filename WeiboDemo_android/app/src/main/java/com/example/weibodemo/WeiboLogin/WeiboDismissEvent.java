@@ -1,10 +1,10 @@
-package com.example.weibodemo;
+package com.example.weibodemo.WeiboLogin;
 
 public class WeiboDismissEvent {
 
     String access_token;
 
-    WeiboDismissEvent(String token) {
+    public WeiboDismissEvent(String token) {
         this.access_token = token;
     }
 
