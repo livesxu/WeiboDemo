@@ -27,18 +27,18 @@ public class WeiboContent {
      */
 
     private boolean hasvisible;
-    private int previous_cursor;
+    private long previous_cursor;
     private long next_cursor;
     private String previous_cursor_str;
     private String next_cursor_str;
-    private int total_number;
-    private int interval;
-    private int uve_blank;
+    private long total_number;
+    private long interval;
+    private long uve_blank;
     private long since_id;
     private String since_id_str;
     private long max_id;
     private String max_id_str;
-    private int has_unread;
+    private long has_unread;
     private List<StatusesBean> statuses;
     private List<?> advertises;
     private List<?> ad;
@@ -51,11 +51,11 @@ public class WeiboContent {
         this.hasvisible = hasvisible;
     }
 
-    public int getPrevious_cursor() {
+    public long getPrevious_cursor() {
         return previous_cursor;
     }
 
-    public void setPrevious_cursor(int previous_cursor) {
+    public void setPrevious_cursor(long previous_cursor) {
         this.previous_cursor = previous_cursor;
     }
 
@@ -83,27 +83,27 @@ public class WeiboContent {
         this.next_cursor_str = next_cursor_str;
     }
 
-    public int getTotal_number() {
+    public long getTotal_number() {
         return total_number;
     }
 
-    public void setTotal_number(int total_number) {
+    public void setTotal_number(long total_number) {
         this.total_number = total_number;
     }
 
-    public int getInterval() {
+    public long getInterval() {
         return interval;
     }
 
-    public void setInterval(int interval) {
+    public void setInterval(long interval) {
         this.interval = interval;
     }
 
-    public int getUve_blank() {
+    public long getUve_blank() {
         return uve_blank;
     }
 
-    public void setUve_blank(int uve_blank) {
+    public void setUve_blank(long uve_blank) {
         this.uve_blank = uve_blank;
     }
 
@@ -139,11 +139,11 @@ public class WeiboContent {
         this.max_id_str = max_id_str;
     }
 
-    public int getHas_unread() {
+    public long getHas_unread() {
         return has_unread;
     }
 
-    public void setHas_unread(int has_unread) {
+    public void setHas_unread(long has_unread) {
         this.has_unread = has_unread;
     }
 
@@ -248,11 +248,11 @@ public class WeiboContent {
         private String idstr;
         private String mid;
         private boolean can_edit;
-        private int show_additional_indication;
+        private long show_additional_indication;
         private String text;
-        private int textLength;
-        private int source_allowclick;
-        private int source_type;
+        private long textLength;
+        private long source_allowclick;
+        private long source_type;
         private String source;
         private boolean favorited;
         private boolean truncated;
@@ -264,43 +264,43 @@ public class WeiboContent {
         private String original_pic;
         private Object geo;
         private boolean is_paid;
-        private int mblog_vip_type;
+        private long mblog_vip_type;
         private UserBean user;
-        private int reposts_count;
-        private int comments_count;
-        private int attitudes_count;
-        private int pending_approval_count;
+        private long reposts_count;
+        private long comments_count;
+        private long attitudes_count;
+        private long pending_approval_count;
         private boolean isLongText;
-        private int reward_exhibition_type;
+        private long reward_exhibition_type;
         private String reward_scheme;
-        private int hide_flag;
-        private int mlevel;
-        private int biz_feature;
-        private int hasActionTypeCard;
-        private int mblogtype;
+        private long hide_flag;
+        private long mlevel;
+        private long biz_feature;
+        private long hasActionTypeCard;
+        private long mblogtype;
         private String rid;
-        private int userType;
-        private int more_info_type;
+        private long userType;
+        private long more_info_type;
         private String cardid;
         private NumberDisplayStrategyBean number_display_strategy;
-        private int positive_recom_flag;
+        private long positive_recom_flag;
         private boolean enable_comment_guide;
-        private int content_auth;
+        private long content_auth;
         private String gif_ids;
-        private int is_show_bulletin;
+        private long is_show_bulletin;
         private CommentManageInfoBean comment_manage_info;
-        private int pic_num;
+        private long pic_num;
         private AlchemyParamsBean alchemy_params;
         private String picStatus;
         private long fid;
-        private int version;
-        private int hide_multi_attitude;
-        private int page_type;
+        private long version;
+        private long hide_multi_attitude;
+        private long page_type;
         private long pid;
         private String pidstr;
         private RetweetedStatusBean retweeted_status;
         private String mark;
-        private int repost_type;
+        private long repost_type;
         private List<PicUrlsBean> pic_urls;
         private List<Integer> biz_ids;
         private List<?> darwin_tags;
@@ -356,11 +356,11 @@ public class WeiboContent {
             this.can_edit = can_edit;
         }
 
-        public int getShow_additional_indication() {
+        public long getShow_additional_indication() {
             return show_additional_indication;
         }
 
-        public void setShow_additional_indication(int show_additional_indication) {
+        public void setShow_additional_indication(long show_additional_indication) {
             this.show_additional_indication = show_additional_indication;
         }
 
@@ -372,27 +372,27 @@ public class WeiboContent {
             this.text = text;
         }
 
-        public int getTextLength() {
+        public long getTextLength() {
             return textLength;
         }
 
-        public void setTextLength(int textLength) {
+        public void setTextLength(long textLength) {
             this.textLength = textLength;
         }
 
-        public int getSource_allowclick() {
+        public long getSource_allowclick() {
             return source_allowclick;
         }
 
-        public void setSource_allowclick(int source_allowclick) {
+        public void setSource_allowclick(long source_allowclick) {
             this.source_allowclick = source_allowclick;
         }
 
-        public int getSource_type() {
+        public long getSource_type() {
             return source_type;
         }
 
-        public void setSource_type(int source_type) {
+        public void setSource_type(long source_type) {
             this.source_type = source_type;
         }
 
@@ -484,11 +484,11 @@ public class WeiboContent {
             this.is_paid = is_paid;
         }
 
-        public int getMblog_vip_type() {
+        public long getMblog_vip_type() {
             return mblog_vip_type;
         }
 
-        public void setMblog_vip_type(int mblog_vip_type) {
+        public void setMblog_vip_type(long mblog_vip_type) {
             this.mblog_vip_type = mblog_vip_type;
         }
 
@@ -500,35 +500,35 @@ public class WeiboContent {
             this.user = user;
         }
 
-        public int getReposts_count() {
+        public long getReposts_count() {
             return reposts_count;
         }
 
-        public void setReposts_count(int reposts_count) {
+        public void setReposts_count(long reposts_count) {
             this.reposts_count = reposts_count;
         }
 
-        public int getComments_count() {
+        public long getComments_count() {
             return comments_count;
         }
 
-        public void setComments_count(int comments_count) {
+        public void setComments_count(long comments_count) {
             this.comments_count = comments_count;
         }
 
-        public int getAttitudes_count() {
+        public long getAttitudes_count() {
             return attitudes_count;
         }
 
-        public void setAttitudes_count(int attitudes_count) {
+        public void setAttitudes_count(long attitudes_count) {
             this.attitudes_count = attitudes_count;
         }
 
-        public int getPending_approval_count() {
+        public long getPending_approval_count() {
             return pending_approval_count;
         }
 
-        public void setPending_approval_count(int pending_approval_count) {
+        public void setPending_approval_count(long pending_approval_count) {
             this.pending_approval_count = pending_approval_count;
         }
 
@@ -540,11 +540,11 @@ public class WeiboContent {
             this.isLongText = isLongText;
         }
 
-        public int getReward_exhibition_type() {
+        public long getReward_exhibition_type() {
             return reward_exhibition_type;
         }
 
-        public void setReward_exhibition_type(int reward_exhibition_type) {
+        public void setReward_exhibition_type(long reward_exhibition_type) {
             this.reward_exhibition_type = reward_exhibition_type;
         }
 
@@ -556,43 +556,43 @@ public class WeiboContent {
             this.reward_scheme = reward_scheme;
         }
 
-        public int getHide_flag() {
+        public long getHide_flag() {
             return hide_flag;
         }
 
-        public void setHide_flag(int hide_flag) {
+        public void setHide_flag(long hide_flag) {
             this.hide_flag = hide_flag;
         }
 
-        public int getMlevel() {
+        public long getMlevel() {
             return mlevel;
         }
 
-        public void setMlevel(int mlevel) {
+        public void setMlevel(long mlevel) {
             this.mlevel = mlevel;
         }
 
-        public int getBiz_feature() {
+        public long getBiz_feature() {
             return biz_feature;
         }
 
-        public void setBiz_feature(int biz_feature) {
+        public void setBiz_feature(long biz_feature) {
             this.biz_feature = biz_feature;
         }
 
-        public int getHasActionTypeCard() {
+        public long getHasActionTypeCard() {
             return hasActionTypeCard;
         }
 
-        public void setHasActionTypeCard(int hasActionTypeCard) {
+        public void setHasActionTypeCard(long hasActionTypeCard) {
             this.hasActionTypeCard = hasActionTypeCard;
         }
 
-        public int getMblogtype() {
+        public long getMblogtype() {
             return mblogtype;
         }
 
-        public void setMblogtype(int mblogtype) {
+        public void setMblogtype(long mblogtype) {
             this.mblogtype = mblogtype;
         }
 
@@ -604,19 +604,19 @@ public class WeiboContent {
             this.rid = rid;
         }
 
-        public int getUserType() {
+        public long getUserType() {
             return userType;
         }
 
-        public void setUserType(int userType) {
+        public void setUserType(long userType) {
             this.userType = userType;
         }
 
-        public int getMore_info_type() {
+        public long getMore_info_type() {
             return more_info_type;
         }
 
-        public void setMore_info_type(int more_info_type) {
+        public void setMore_info_type(long more_info_type) {
             this.more_info_type = more_info_type;
         }
 
@@ -636,11 +636,11 @@ public class WeiboContent {
             this.number_display_strategy = number_display_strategy;
         }
 
-        public int getPositive_recom_flag() {
+        public long getPositive_recom_flag() {
             return positive_recom_flag;
         }
 
-        public void setPositive_recom_flag(int positive_recom_flag) {
+        public void setPositive_recom_flag(long positive_recom_flag) {
             this.positive_recom_flag = positive_recom_flag;
         }
 
@@ -652,11 +652,11 @@ public class WeiboContent {
             this.enable_comment_guide = enable_comment_guide;
         }
 
-        public int getContent_auth() {
+        public long getContent_auth() {
             return content_auth;
         }
 
-        public void setContent_auth(int content_auth) {
+        public void setContent_auth(long content_auth) {
             this.content_auth = content_auth;
         }
 
@@ -668,11 +668,11 @@ public class WeiboContent {
             this.gif_ids = gif_ids;
         }
 
-        public int getIs_show_bulletin() {
+        public long getIs_show_bulletin() {
             return is_show_bulletin;
         }
 
-        public void setIs_show_bulletin(int is_show_bulletin) {
+        public void setIs_show_bulletin(long is_show_bulletin) {
             this.is_show_bulletin = is_show_bulletin;
         }
 
@@ -684,11 +684,11 @@ public class WeiboContent {
             this.comment_manage_info = comment_manage_info;
         }
 
-        public int getPic_num() {
+        public long getPic_num() {
             return pic_num;
         }
 
-        public void setPic_num(int pic_num) {
+        public void setPic_num(long pic_num) {
             this.pic_num = pic_num;
         }
 
@@ -716,27 +716,27 @@ public class WeiboContent {
             this.fid = fid;
         }
 
-        public int getVersion() {
+        public long getVersion() {
             return version;
         }
 
-        public void setVersion(int version) {
+        public void setVersion(long version) {
             this.version = version;
         }
 
-        public int getHide_multi_attitude() {
+        public long getHide_multi_attitude() {
             return hide_multi_attitude;
         }
 
-        public void setHide_multi_attitude(int hide_multi_attitude) {
+        public void setHide_multi_attitude(long hide_multi_attitude) {
             this.hide_multi_attitude = hide_multi_attitude;
         }
 
-        public int getPage_type() {
+        public long getPage_type() {
             return page_type;
         }
 
-        public void setPage_type(int page_type) {
+        public void setPage_type(long page_type) {
             this.page_type = page_type;
         }
 
@@ -772,11 +772,11 @@ public class WeiboContent {
             this.mark = mark;
         }
 
-        public int getRepost_type() {
+        public long getRepost_type() {
             return repost_type;
         }
 
-        public void setRepost_type(int repost_type) {
+        public void setRepost_type(long repost_type) {
             this.repost_type = repost_type;
         }
 
@@ -834,22 +834,22 @@ public class WeiboContent {
              * list_id : 0
              */
 
-            private int type;
-            private int list_id;
+            private long type;
+            private long list_id;
 
-            public int getType() {
+            public long getType() {
                 return type;
             }
 
-            public void setType(int type) {
+            public void setType(long type) {
                 this.type = type;
             }
 
-            public int getList_id() {
+            public long getList_id() {
                 return list_id;
             }
 
-            public void setList_id(int list_id) {
+            public void setList_id(long list_id) {
                 this.list_id = list_id;
             }
         }
@@ -935,10 +935,10 @@ public class WeiboContent {
              * tab_manage : [0, 0]
              */
 
-            private int id;
+            private long id;
             private String idstr;
             @SerializedName("class")
-            private int classX;
+            private long classX;
             private String screen_name;
             private String name;
             private String province;
@@ -953,23 +953,23 @@ public class WeiboContent {
             private String domain;
             private String weihao;
             private String gender;
-            private int followers_count;
-            private int friends_count;
-            private int pagefriends_count;
-            private int statuses_count;
-            private int video_status_count;
-            private int video_play_count;
-            private int favourites_count;
+            private long followers_count;
+            private long friends_count;
+            private long pagefriends_count;
+            private long statuses_count;
+            private long video_status_count;
+            private long video_play_count;
+            private long favourites_count;
             private String created_at;
             private boolean following;
             private boolean allow_all_act_msg;
             private boolean geo_enabled;
             private boolean verified;
-            private int verified_type;
+            private long verified_type;
             private String remark;
             private String email;
             private InsecurityBean insecurity;
-            private int ptype;
+            private long ptype;
             private boolean allow_all_comment;
             private String avatar_large;
             private String avatar_hd;
@@ -978,9 +978,9 @@ public class WeiboContent {
             private String verified_reason_url;
             private String verified_source;
             private String verified_source_url;
-            private int verified_state;
-            private int verified_level;
-            private int verified_type_ext;
+            private long verified_state;
+            private long verified_level;
+            private long verified_type_ext;
             private boolean has_service_tel;
             private String verified_reason_modified;
             private String verified_contact_name;
@@ -989,36 +989,36 @@ public class WeiboContent {
             private boolean follow_me;
             private boolean like;
             private boolean like_me;
-            private int online_status;
-            private int bi_followers_count;
+            private long online_status;
+            private long bi_followers_count;
             private String lang;
-            private int star;
-            private int mbtype;
-            private int mbrank;
-            private int block_word;
-            private int block_app;
+            private long star;
+            private long mbtype;
+            private long mbrank;
+            private long block_word;
+            private long block_app;
             private String ability_tags;
-            private int credit_score;
-            private int user_ability;
+            private long credit_score;
+            private long user_ability;
             private String cardid;
-            private int urank;
-            private int story_read_state;
-            private int vclub_member;
-            private int is_teenager;
-            private int is_guardian;
-            private int is_teenager_list;
-            private int pc_new;
+            private long urank;
+            private long story_read_state;
+            private long vclub_member;
+            private long is_teenager;
+            private long is_guardian;
+            private long is_teenager_list;
+            private long pc_new;
             private boolean special_follow;
-            private int planet_video;
-            private int video_mark;
-            private int live_status;
+            private long planet_video;
+            private long video_mark;
+            private long live_status;
             private String tab_manage;
 
-            public int getId() {
+            public long getId() {
                 return id;
             }
 
-            public void setId(int id) {
+            public void setId(long id) {
                 this.id = id;
             }
 
@@ -1030,11 +1030,11 @@ public class WeiboContent {
                 this.idstr = idstr;
             }
 
-            public int getClassX() {
+            public long getClassX() {
                 return classX;
             }
 
-            public void setClassX(int classX) {
+            public void setClassX(long classX) {
                 this.classX = classX;
             }
 
@@ -1150,59 +1150,59 @@ public class WeiboContent {
                 this.gender = gender;
             }
 
-            public int getFollowers_count() {
+            public long getFollowers_count() {
                 return followers_count;
             }
 
-            public void setFollowers_count(int followers_count) {
+            public void setFollowers_count(long followers_count) {
                 this.followers_count = followers_count;
             }
 
-            public int getFriends_count() {
+            public long getFriends_count() {
                 return friends_count;
             }
 
-            public void setFriends_count(int friends_count) {
+            public void setFriends_count(long friends_count) {
                 this.friends_count = friends_count;
             }
 
-            public int getPagefriends_count() {
+            public long getPagefriends_count() {
                 return pagefriends_count;
             }
 
-            public void setPagefriends_count(int pagefriends_count) {
+            public void setPagefriends_count(long pagefriends_count) {
                 this.pagefriends_count = pagefriends_count;
             }
 
-            public int getStatuses_count() {
+            public long getStatuses_count() {
                 return statuses_count;
             }
 
-            public void setStatuses_count(int statuses_count) {
+            public void setStatuses_count(long statuses_count) {
                 this.statuses_count = statuses_count;
             }
 
-            public int getVideo_status_count() {
+            public long getVideo_status_count() {
                 return video_status_count;
             }
 
-            public void setVideo_status_count(int video_status_count) {
+            public void setVideo_status_count(long video_status_count) {
                 this.video_status_count = video_status_count;
             }
 
-            public int getVideo_play_count() {
+            public long getVideo_play_count() {
                 return video_play_count;
             }
 
-            public void setVideo_play_count(int video_play_count) {
+            public void setVideo_play_count(long video_play_count) {
                 this.video_play_count = video_play_count;
             }
 
-            public int getFavourites_count() {
+            public long getFavourites_count() {
                 return favourites_count;
             }
 
-            public void setFavourites_count(int favourites_count) {
+            public void setFavourites_count(long favourites_count) {
                 this.favourites_count = favourites_count;
             }
 
@@ -1246,11 +1246,11 @@ public class WeiboContent {
                 this.verified = verified;
             }
 
-            public int getVerified_type() {
+            public long getVerified_type() {
                 return verified_type;
             }
 
-            public void setVerified_type(int verified_type) {
+            public void setVerified_type(long verified_type) {
                 this.verified_type = verified_type;
             }
 
@@ -1278,11 +1278,11 @@ public class WeiboContent {
                 this.insecurity = insecurity;
             }
 
-            public int getPtype() {
+            public long getPtype() {
                 return ptype;
             }
 
-            public void setPtype(int ptype) {
+            public void setPtype(long ptype) {
                 this.ptype = ptype;
             }
 
@@ -1350,27 +1350,27 @@ public class WeiboContent {
                 this.verified_source_url = verified_source_url;
             }
 
-            public int getVerified_state() {
+            public long getVerified_state() {
                 return verified_state;
             }
 
-            public void setVerified_state(int verified_state) {
+            public void setVerified_state(long verified_state) {
                 this.verified_state = verified_state;
             }
 
-            public int getVerified_level() {
+            public long getVerified_level() {
                 return verified_level;
             }
 
-            public void setVerified_level(int verified_level) {
+            public void setVerified_level(long verified_level) {
                 this.verified_level = verified_level;
             }
 
-            public int getVerified_type_ext() {
+            public long getVerified_type_ext() {
                 return verified_type_ext;
             }
 
-            public void setVerified_type_ext(int verified_type_ext) {
+            public void setVerified_type_ext(long verified_type_ext) {
                 this.verified_type_ext = verified_type_ext;
             }
 
@@ -1438,19 +1438,19 @@ public class WeiboContent {
                 this.like_me = like_me;
             }
 
-            public int getOnline_status() {
+            public long getOnline_status() {
                 return online_status;
             }
 
-            public void setOnline_status(int online_status) {
+            public void setOnline_status(long online_status) {
                 this.online_status = online_status;
             }
 
-            public int getBi_followers_count() {
+            public long getBi_followers_count() {
                 return bi_followers_count;
             }
 
-            public void setBi_followers_count(int bi_followers_count) {
+            public void setBi_followers_count(long bi_followers_count) {
                 this.bi_followers_count = bi_followers_count;
             }
 
@@ -1462,43 +1462,43 @@ public class WeiboContent {
                 this.lang = lang;
             }
 
-            public int getStar() {
+            public long getStar() {
                 return star;
             }
 
-            public void setStar(int star) {
+            public void setStar(long star) {
                 this.star = star;
             }
 
-            public int getMbtype() {
+            public long getMbtype() {
                 return mbtype;
             }
 
-            public void setMbtype(int mbtype) {
+            public void setMbtype(long mbtype) {
                 this.mbtype = mbtype;
             }
 
-            public int getMbrank() {
+            public long getMbrank() {
                 return mbrank;
             }
 
-            public void setMbrank(int mbrank) {
+            public void setMbrank(long mbrank) {
                 this.mbrank = mbrank;
             }
 
-            public int getBlock_word() {
+            public long getBlock_word() {
                 return block_word;
             }
 
-            public void setBlock_word(int block_word) {
+            public void setBlock_word(long block_word) {
                 this.block_word = block_word;
             }
 
-            public int getBlock_app() {
+            public long getBlock_app() {
                 return block_app;
             }
 
-            public void setBlock_app(int block_app) {
+            public void setBlock_app(long block_app) {
                 this.block_app = block_app;
             }
 
@@ -1510,19 +1510,19 @@ public class WeiboContent {
                 this.ability_tags = ability_tags;
             }
 
-            public int getCredit_score() {
+            public long getCredit_score() {
                 return credit_score;
             }
 
-            public void setCredit_score(int credit_score) {
+            public void setCredit_score(long credit_score) {
                 this.credit_score = credit_score;
             }
 
-            public int getUser_ability() {
+            public long getUser_ability() {
                 return user_ability;
             }
 
-            public void setUser_ability(int user_ability) {
+            public void setUser_ability(long user_ability) {
                 this.user_ability = user_ability;
             }
 
@@ -1534,59 +1534,59 @@ public class WeiboContent {
                 this.cardid = cardid;
             }
 
-            public int getUrank() {
+            public long getUrank() {
                 return urank;
             }
 
-            public void setUrank(int urank) {
+            public void setUrank(long urank) {
                 this.urank = urank;
             }
 
-            public int getStory_read_state() {
+            public long getStory_read_state() {
                 return story_read_state;
             }
 
-            public void setStory_read_state(int story_read_state) {
+            public void setStory_read_state(long story_read_state) {
                 this.story_read_state = story_read_state;
             }
 
-            public int getVclub_member() {
+            public long getVclub_member() {
                 return vclub_member;
             }
 
-            public void setVclub_member(int vclub_member) {
+            public void setVclub_member(long vclub_member) {
                 this.vclub_member = vclub_member;
             }
 
-            public int getIs_teenager() {
+            public long getIs_teenager() {
                 return is_teenager;
             }
 
-            public void setIs_teenager(int is_teenager) {
+            public void setIs_teenager(long is_teenager) {
                 this.is_teenager = is_teenager;
             }
 
-            public int getIs_guardian() {
+            public long getIs_guardian() {
                 return is_guardian;
             }
 
-            public void setIs_guardian(int is_guardian) {
+            public void setIs_guardian(long is_guardian) {
                 this.is_guardian = is_guardian;
             }
 
-            public int getIs_teenager_list() {
+            public long getIs_teenager_list() {
                 return is_teenager_list;
             }
 
-            public void setIs_teenager_list(int is_teenager_list) {
+            public void setIs_teenager_list(long is_teenager_list) {
                 this.is_teenager_list = is_teenager_list;
             }
 
-            public int getPc_new() {
+            public long getPc_new() {
                 return pc_new;
             }
 
-            public void setPc_new(int pc_new) {
+            public void setPc_new(long pc_new) {
                 this.pc_new = pc_new;
             }
 
@@ -1598,27 +1598,27 @@ public class WeiboContent {
                 this.special_follow = special_follow;
             }
 
-            public int getPlanet_video() {
+            public long getPlanet_video() {
                 return planet_video;
             }
 
-            public void setPlanet_video(int planet_video) {
+            public void setPlanet_video(long planet_video) {
                 this.planet_video = planet_video;
             }
 
-            public int getVideo_mark() {
+            public long getVideo_mark() {
                 return video_mark;
             }
 
-            public void setVideo_mark(int video_mark) {
+            public void setVideo_mark(long video_mark) {
                 this.video_mark = video_mark;
             }
 
-            public int getLive_status() {
+            public long getLive_status() {
                 return live_status;
             }
 
-            public void setLive_status(int live_status) {
+            public void setLive_status(long live_status) {
                 this.live_status = live_status;
             }
 
@@ -1654,23 +1654,23 @@ public class WeiboContent {
              * display_text : 100万+
              */
 
-            private int apply_scenario_flag;
-            private int display_text_min_number;
+            private long apply_scenario_flag;
+            private long display_text_min_number;
             private String display_text;
 
-            public int getApply_scenario_flag() {
+            public long getApply_scenario_flag() {
                 return apply_scenario_flag;
             }
 
-            public void setApply_scenario_flag(int apply_scenario_flag) {
+            public void setApply_scenario_flag(long apply_scenario_flag) {
                 this.apply_scenario_flag = apply_scenario_flag;
             }
 
-            public int getDisplay_text_min_number() {
+            public long getDisplay_text_min_number() {
                 return display_text_min_number;
             }
 
-            public void setDisplay_text_min_number(int display_text_min_number) {
+            public void setDisplay_text_min_number(long display_text_min_number) {
                 this.display_text_min_number = display_text_min_number;
             }
 
@@ -1689,22 +1689,22 @@ public class WeiboContent {
              * approval_comment_type : 0
              */
 
-            private int comment_permission_type;
-            private int approval_comment_type;
+            private long comment_permission_type;
+            private long approval_comment_type;
 
-            public int getComment_permission_type() {
+            public long getComment_permission_type() {
                 return comment_permission_type;
             }
 
-            public void setComment_permission_type(int comment_permission_type) {
+            public void setComment_permission_type(long comment_permission_type) {
                 this.comment_permission_type = comment_permission_type;
             }
 
-            public int getApproval_comment_type() {
+            public long getApproval_comment_type() {
                 return approval_comment_type;
             }
 
-            public void setApproval_comment_type(int approval_comment_type) {
+            public void setApproval_comment_type(long approval_comment_type) {
                 this.approval_comment_type = approval_comment_type;
             }
         }
@@ -1714,13 +1714,13 @@ public class WeiboContent {
              * comment_guide_type : 0
              */
 
-            private int comment_guide_type;
+            private long comment_guide_type;
 
-            public int getComment_guide_type() {
+            public long getComment_guide_type() {
                 return comment_guide_type;
             }
 
-            public void setComment_guide_type(int comment_guide_type) {
+            public void setComment_guide_type(long comment_guide_type) {
                 this.comment_guide_type = comment_guide_type;
             }
         }
@@ -1792,12 +1792,12 @@ public class WeiboContent {
             private String idstr;
             private String mid;
             private boolean can_edit;
-            private int version;
-            private int show_additional_indication;
+            private long version;
+            private long show_additional_indication;
             private String text;
-            private int textLength;
-            private int source_allowclick;
-            private int source_type;
+            private long textLength;
+            private long source_allowclick;
+            private long source_type;
             private String source;
             private boolean favorited;
             private boolean truncated;
@@ -1806,32 +1806,32 @@ public class WeiboContent {
             private String in_reply_to_screen_name;
             private Object geo;
             private boolean is_paid;
-            private int mblog_vip_type;
+            private long mblog_vip_type;
             private UserBeanX user;
-            private int reposts_count;
-            private int comments_count;
-            private int attitudes_count;
-            private int pending_approval_count;
+            private long reposts_count;
+            private long comments_count;
+            private long attitudes_count;
+            private long pending_approval_count;
             private boolean isLongText;
-            private int reward_exhibition_type;
-            private int hide_flag;
-            private int mlevel;
+            private long reward_exhibition_type;
+            private long hide_flag;
+            private long mlevel;
             private long biz_feature;
-            private int expire_time;
-            private int hasActionTypeCard;
-            private int mblogtype;
+            private long expire_time;
+            private long hasActionTypeCard;
+            private long mblogtype;
             private String mark;
-            private int userType;
+            private long userType;
             private ExtendInfoBean extend_info;
-            private int more_info_type;
+            private long more_info_type;
             private String cardid;
             private NumberDisplayStrategyBeanX number_display_strategy;
-            private int positive_recom_flag;
-            private int content_auth;
+            private long positive_recom_flag;
+            private long content_auth;
             private String gif_ids;
-            private int is_show_bulletin;
+            private long is_show_bulletin;
             private CommentManageInfoBeanX comment_manage_info;
-            private int pic_num;
+            private long pic_num;
             private long fid;
             private List<?> pic_urls;
             private List<AnnotationsBean> annotations;
@@ -1888,19 +1888,19 @@ public class WeiboContent {
                 this.can_edit = can_edit;
             }
 
-            public int getVersion() {
+            public long getVersion() {
                 return version;
             }
 
-            public void setVersion(int version) {
+            public void setVersion(long version) {
                 this.version = version;
             }
 
-            public int getShow_additional_indication() {
+            public long getShow_additional_indication() {
                 return show_additional_indication;
             }
 
-            public void setShow_additional_indication(int show_additional_indication) {
+            public void setShow_additional_indication(long show_additional_indication) {
                 this.show_additional_indication = show_additional_indication;
             }
 
@@ -1912,27 +1912,27 @@ public class WeiboContent {
                 this.text = text;
             }
 
-            public int getTextLength() {
+            public long getTextLength() {
                 return textLength;
             }
 
-            public void setTextLength(int textLength) {
+            public void setTextLength(long textLength) {
                 this.textLength = textLength;
             }
 
-            public int getSource_allowclick() {
+            public long getSource_allowclick() {
                 return source_allowclick;
             }
 
-            public void setSource_allowclick(int source_allowclick) {
+            public void setSource_allowclick(long source_allowclick) {
                 this.source_allowclick = source_allowclick;
             }
 
-            public int getSource_type() {
+            public long getSource_type() {
                 return source_type;
             }
 
-            public void setSource_type(int source_type) {
+            public void setSource_type(long source_type) {
                 this.source_type = source_type;
             }
 
@@ -2000,11 +2000,11 @@ public class WeiboContent {
                 this.is_paid = is_paid;
             }
 
-            public int getMblog_vip_type() {
+            public long getMblog_vip_type() {
                 return mblog_vip_type;
             }
 
-            public void setMblog_vip_type(int mblog_vip_type) {
+            public void setMblog_vip_type(long mblog_vip_type) {
                 this.mblog_vip_type = mblog_vip_type;
             }
 
@@ -2016,35 +2016,35 @@ public class WeiboContent {
                 this.user = user;
             }
 
-            public int getReposts_count() {
+            public long getReposts_count() {
                 return reposts_count;
             }
 
-            public void setReposts_count(int reposts_count) {
+            public void setReposts_count(long reposts_count) {
                 this.reposts_count = reposts_count;
             }
 
-            public int getComments_count() {
+            public long getComments_count() {
                 return comments_count;
             }
 
-            public void setComments_count(int comments_count) {
+            public void setComments_count(long comments_count) {
                 this.comments_count = comments_count;
             }
 
-            public int getAttitudes_count() {
+            public long getAttitudes_count() {
                 return attitudes_count;
             }
 
-            public void setAttitudes_count(int attitudes_count) {
+            public void setAttitudes_count(long attitudes_count) {
                 this.attitudes_count = attitudes_count;
             }
 
-            public int getPending_approval_count() {
+            public long getPending_approval_count() {
                 return pending_approval_count;
             }
 
-            public void setPending_approval_count(int pending_approval_count) {
+            public void setPending_approval_count(long pending_approval_count) {
                 this.pending_approval_count = pending_approval_count;
             }
 
@@ -2056,27 +2056,27 @@ public class WeiboContent {
                 this.isLongText = isLongText;
             }
 
-            public int getReward_exhibition_type() {
+            public long getReward_exhibition_type() {
                 return reward_exhibition_type;
             }
 
-            public void setReward_exhibition_type(int reward_exhibition_type) {
+            public void setReward_exhibition_type(long reward_exhibition_type) {
                 this.reward_exhibition_type = reward_exhibition_type;
             }
 
-            public int getHide_flag() {
+            public long getHide_flag() {
                 return hide_flag;
             }
 
-            public void setHide_flag(int hide_flag) {
+            public void setHide_flag(long hide_flag) {
                 this.hide_flag = hide_flag;
             }
 
-            public int getMlevel() {
+            public long getMlevel() {
                 return mlevel;
             }
 
-            public void setMlevel(int mlevel) {
+            public void setMlevel(long mlevel) {
                 this.mlevel = mlevel;
             }
 
@@ -2088,27 +2088,27 @@ public class WeiboContent {
                 this.biz_feature = biz_feature;
             }
 
-            public int getExpire_time() {
+            public long getExpire_time() {
                 return expire_time;
             }
 
-            public void setExpire_time(int expire_time) {
+            public void setExpire_time(long expire_time) {
                 this.expire_time = expire_time;
             }
 
-            public int getHasActionTypeCard() {
+            public long getHasActionTypeCard() {
                 return hasActionTypeCard;
             }
 
-            public void setHasActionTypeCard(int hasActionTypeCard) {
+            public void setHasActionTypeCard(long hasActionTypeCard) {
                 this.hasActionTypeCard = hasActionTypeCard;
             }
 
-            public int getMblogtype() {
+            public long getMblogtype() {
                 return mblogtype;
             }
 
-            public void setMblogtype(int mblogtype) {
+            public void setMblogtype(long mblogtype) {
                 this.mblogtype = mblogtype;
             }
 
@@ -2120,11 +2120,11 @@ public class WeiboContent {
                 this.mark = mark;
             }
 
-            public int getUserType() {
+            public long getUserType() {
                 return userType;
             }
 
-            public void setUserType(int userType) {
+            public void setUserType(long userType) {
                 this.userType = userType;
             }
 
@@ -2136,11 +2136,11 @@ public class WeiboContent {
                 this.extend_info = extend_info;
             }
 
-            public int getMore_info_type() {
+            public long getMore_info_type() {
                 return more_info_type;
             }
 
-            public void setMore_info_type(int more_info_type) {
+            public void setMore_info_type(long more_info_type) {
                 this.more_info_type = more_info_type;
             }
 
@@ -2160,19 +2160,19 @@ public class WeiboContent {
                 this.number_display_strategy = number_display_strategy;
             }
 
-            public int getPositive_recom_flag() {
+            public long getPositive_recom_flag() {
                 return positive_recom_flag;
             }
 
-            public void setPositive_recom_flag(int positive_recom_flag) {
+            public void setPositive_recom_flag(long positive_recom_flag) {
                 this.positive_recom_flag = positive_recom_flag;
             }
 
-            public int getContent_auth() {
+            public long getContent_auth() {
                 return content_auth;
             }
 
-            public void setContent_auth(int content_auth) {
+            public void setContent_auth(long content_auth) {
                 this.content_auth = content_auth;
             }
 
@@ -2184,11 +2184,11 @@ public class WeiboContent {
                 this.gif_ids = gif_ids;
             }
 
-            public int getIs_show_bulletin() {
+            public long getIs_show_bulletin() {
                 return is_show_bulletin;
             }
 
-            public void setIs_show_bulletin(int is_show_bulletin) {
+            public void setIs_show_bulletin(long is_show_bulletin) {
                 this.is_show_bulletin = is_show_bulletin;
             }
 
@@ -2200,11 +2200,11 @@ public class WeiboContent {
                 this.comment_manage_info = comment_manage_info;
             }
 
-            public int getPic_num() {
+            public long getPic_num() {
                 return pic_num;
             }
 
-            public void setPic_num(int pic_num) {
+            public void setPic_num(long pic_num) {
                 this.pic_num = pic_num;
             }
 
@@ -2270,22 +2270,22 @@ public class WeiboContent {
                  * list_id : 0
                  */
 
-                private int type;
-                private int list_id;
+                private long type;
+                private long list_id;
 
-                public int getType() {
+                public long getType() {
                     return type;
                 }
 
-                public void setType(int type) {
+                public void setType(long type) {
                     this.type = type;
                 }
 
-                public int getList_id() {
+                public long getList_id() {
                     return list_id;
                 }
 
-                public void setList_id(int list_id) {
+                public void setList_id(long list_id) {
                     this.list_id = list_id;
                 }
             }
@@ -2370,10 +2370,10 @@ public class WeiboContent {
                  * tab_manage : [0, 0]
                  */
 
-                private int id;
+                private long id;
                 private String idstr;
                 @SerializedName("class")
-                private int classX;
+                private long classX;
                 private String screen_name;
                 private String name;
                 private String province;
@@ -2388,23 +2388,23 @@ public class WeiboContent {
                 private String domain;
                 private String weihao;
                 private String gender;
-                private int followers_count;
-                private int friends_count;
-                private int pagefriends_count;
-                private int statuses_count;
-                private int video_status_count;
-                private int video_play_count;
-                private int favourites_count;
+                private long followers_count;
+                private long friends_count;
+                private long pagefriends_count;
+                private long statuses_count;
+                private long video_status_count;
+                private long video_play_count;
+                private long favourites_count;
                 private String created_at;
                 private boolean following;
                 private boolean allow_all_act_msg;
                 private boolean geo_enabled;
                 private boolean verified;
-                private int verified_type;
+                private long verified_type;
                 private String remark;
                 private String email;
                 private InsecurityBeanX insecurity;
-                private int ptype;
+                private long ptype;
                 private boolean allow_all_comment;
                 private String avatar_large;
                 private String avatar_hd;
@@ -2413,9 +2413,9 @@ public class WeiboContent {
                 private String verified_reason_url;
                 private String verified_source;
                 private String verified_source_url;
-                private int verified_state;
-                private int verified_level;
-                private int verified_type_ext;
+                private long verified_state;
+                private long verified_level;
+                private long verified_type_ext;
                 private boolean has_service_tel;
                 private String verified_reason_modified;
                 private String verified_contact_name;
@@ -2424,35 +2424,35 @@ public class WeiboContent {
                 private boolean follow_me;
                 private boolean like;
                 private boolean like_me;
-                private int online_status;
-                private int bi_followers_count;
+                private long online_status;
+                private long bi_followers_count;
                 private String lang;
-                private int star;
-                private int mbtype;
-                private int mbrank;
-                private int block_word;
-                private int block_app;
-                private int credit_score;
-                private int user_ability;
+                private long star;
+                private long mbtype;
+                private long mbrank;
+                private long block_word;
+                private long block_app;
+                private long credit_score;
+                private long user_ability;
                 private String cardid;
-                private int urank;
-                private int story_read_state;
-                private int vclub_member;
-                private int is_teenager;
-                private int is_guardian;
-                private int is_teenager_list;
-                private int pc_new;
+                private long urank;
+                private long story_read_state;
+                private long vclub_member;
+                private long is_teenager;
+                private long is_guardian;
+                private long is_teenager_list;
+                private long pc_new;
                 private boolean special_follow;
-                private int planet_video;
-                private int video_mark;
-                private int live_status;
+                private long planet_video;
+                private long video_mark;
+                private long live_status;
                 private String tab_manage;
 
-                public int getId() {
+                public long getId() {
                     return id;
                 }
 
-                public void setId(int id) {
+                public void setId(long id) {
                     this.id = id;
                 }
 
@@ -2464,11 +2464,11 @@ public class WeiboContent {
                     this.idstr = idstr;
                 }
 
-                public int getClassX() {
+                public long getClassX() {
                     return classX;
                 }
 
-                public void setClassX(int classX) {
+                public void setClassX(long classX) {
                     this.classX = classX;
                 }
 
@@ -2584,59 +2584,59 @@ public class WeiboContent {
                     this.gender = gender;
                 }
 
-                public int getFollowers_count() {
+                public long getFollowers_count() {
                     return followers_count;
                 }
 
-                public void setFollowers_count(int followers_count) {
+                public void setFollowers_count(long followers_count) {
                     this.followers_count = followers_count;
                 }
 
-                public int getFriends_count() {
+                public long getFriends_count() {
                     return friends_count;
                 }
 
-                public void setFriends_count(int friends_count) {
+                public void setFriends_count(long friends_count) {
                     this.friends_count = friends_count;
                 }
 
-                public int getPagefriends_count() {
+                public long getPagefriends_count() {
                     return pagefriends_count;
                 }
 
-                public void setPagefriends_count(int pagefriends_count) {
+                public void setPagefriends_count(long pagefriends_count) {
                     this.pagefriends_count = pagefriends_count;
                 }
 
-                public int getStatuses_count() {
+                public long getStatuses_count() {
                     return statuses_count;
                 }
 
-                public void setStatuses_count(int statuses_count) {
+                public void setStatuses_count(long statuses_count) {
                     this.statuses_count = statuses_count;
                 }
 
-                public int getVideo_status_count() {
+                public long getVideo_status_count() {
                     return video_status_count;
                 }
 
-                public void setVideo_status_count(int video_status_count) {
+                public void setVideo_status_count(long video_status_count) {
                     this.video_status_count = video_status_count;
                 }
 
-                public int getVideo_play_count() {
+                public long getVideo_play_count() {
                     return video_play_count;
                 }
 
-                public void setVideo_play_count(int video_play_count) {
+                public void setVideo_play_count(long video_play_count) {
                     this.video_play_count = video_play_count;
                 }
 
-                public int getFavourites_count() {
+                public long getFavourites_count() {
                     return favourites_count;
                 }
 
-                public void setFavourites_count(int favourites_count) {
+                public void setFavourites_count(long favourites_count) {
                     this.favourites_count = favourites_count;
                 }
 
@@ -2680,11 +2680,11 @@ public class WeiboContent {
                     this.verified = verified;
                 }
 
-                public int getVerified_type() {
+                public long getVerified_type() {
                     return verified_type;
                 }
 
-                public void setVerified_type(int verified_type) {
+                public void setVerified_type(long verified_type) {
                     this.verified_type = verified_type;
                 }
 
@@ -2712,11 +2712,11 @@ public class WeiboContent {
                     this.insecurity = insecurity;
                 }
 
-                public int getPtype() {
+                public long getPtype() {
                     return ptype;
                 }
 
-                public void setPtype(int ptype) {
+                public void setPtype(long ptype) {
                     this.ptype = ptype;
                 }
 
@@ -2784,27 +2784,27 @@ public class WeiboContent {
                     this.verified_source_url = verified_source_url;
                 }
 
-                public int getVerified_state() {
+                public long getVerified_state() {
                     return verified_state;
                 }
 
-                public void setVerified_state(int verified_state) {
+                public void setVerified_state(long verified_state) {
                     this.verified_state = verified_state;
                 }
 
-                public int getVerified_level() {
+                public long getVerified_level() {
                     return verified_level;
                 }
 
-                public void setVerified_level(int verified_level) {
+                public void setVerified_level(long verified_level) {
                     this.verified_level = verified_level;
                 }
 
-                public int getVerified_type_ext() {
+                public long getVerified_type_ext() {
                     return verified_type_ext;
                 }
 
-                public void setVerified_type_ext(int verified_type_ext) {
+                public void setVerified_type_ext(long verified_type_ext) {
                     this.verified_type_ext = verified_type_ext;
                 }
 
@@ -2872,19 +2872,19 @@ public class WeiboContent {
                     this.like_me = like_me;
                 }
 
-                public int getOnline_status() {
+                public long getOnline_status() {
                     return online_status;
                 }
 
-                public void setOnline_status(int online_status) {
+                public void setOnline_status(long online_status) {
                     this.online_status = online_status;
                 }
 
-                public int getBi_followers_count() {
+                public long getBi_followers_count() {
                     return bi_followers_count;
                 }
 
-                public void setBi_followers_count(int bi_followers_count) {
+                public void setBi_followers_count(long bi_followers_count) {
                     this.bi_followers_count = bi_followers_count;
                 }
 
@@ -2896,59 +2896,59 @@ public class WeiboContent {
                     this.lang = lang;
                 }
 
-                public int getStar() {
+                public long getStar() {
                     return star;
                 }
 
-                public void setStar(int star) {
+                public void setStar(long star) {
                     this.star = star;
                 }
 
-                public int getMbtype() {
+                public long getMbtype() {
                     return mbtype;
                 }
 
-                public void setMbtype(int mbtype) {
+                public void setMbtype(long mbtype) {
                     this.mbtype = mbtype;
                 }
 
-                public int getMbrank() {
+                public long getMbrank() {
                     return mbrank;
                 }
 
-                public void setMbrank(int mbrank) {
+                public void setMbrank(long mbrank) {
                     this.mbrank = mbrank;
                 }
 
-                public int getBlock_word() {
+                public long getBlock_word() {
                     return block_word;
                 }
 
-                public void setBlock_word(int block_word) {
+                public void setBlock_word(long block_word) {
                     this.block_word = block_word;
                 }
 
-                public int getBlock_app() {
+                public long getBlock_app() {
                     return block_app;
                 }
 
-                public void setBlock_app(int block_app) {
+                public void setBlock_app(long block_app) {
                     this.block_app = block_app;
                 }
 
-                public int getCredit_score() {
+                public long getCredit_score() {
                     return credit_score;
                 }
 
-                public void setCredit_score(int credit_score) {
+                public void setCredit_score(long credit_score) {
                     this.credit_score = credit_score;
                 }
 
-                public int getUser_ability() {
+                public long getUser_ability() {
                     return user_ability;
                 }
 
-                public void setUser_ability(int user_ability) {
+                public void setUser_ability(long user_ability) {
                     this.user_ability = user_ability;
                 }
 
@@ -2960,59 +2960,59 @@ public class WeiboContent {
                     this.cardid = cardid;
                 }
 
-                public int getUrank() {
+                public long getUrank() {
                     return urank;
                 }
 
-                public void setUrank(int urank) {
+                public void setUrank(long urank) {
                     this.urank = urank;
                 }
 
-                public int getStory_read_state() {
+                public long getStory_read_state() {
                     return story_read_state;
                 }
 
-                public void setStory_read_state(int story_read_state) {
+                public void setStory_read_state(long story_read_state) {
                     this.story_read_state = story_read_state;
                 }
 
-                public int getVclub_member() {
+                public long getVclub_member() {
                     return vclub_member;
                 }
 
-                public void setVclub_member(int vclub_member) {
+                public void setVclub_member(long vclub_member) {
                     this.vclub_member = vclub_member;
                 }
 
-                public int getIs_teenager() {
+                public long getIs_teenager() {
                     return is_teenager;
                 }
 
-                public void setIs_teenager(int is_teenager) {
+                public void setIs_teenager(long is_teenager) {
                     this.is_teenager = is_teenager;
                 }
 
-                public int getIs_guardian() {
+                public long getIs_guardian() {
                     return is_guardian;
                 }
 
-                public void setIs_guardian(int is_guardian) {
+                public void setIs_guardian(long is_guardian) {
                     this.is_guardian = is_guardian;
                 }
 
-                public int getIs_teenager_list() {
+                public long getIs_teenager_list() {
                     return is_teenager_list;
                 }
 
-                public void setIs_teenager_list(int is_teenager_list) {
+                public void setIs_teenager_list(long is_teenager_list) {
                     this.is_teenager_list = is_teenager_list;
                 }
 
-                public int getPc_new() {
+                public long getPc_new() {
                     return pc_new;
                 }
 
-                public void setPc_new(int pc_new) {
+                public void setPc_new(long pc_new) {
                     this.pc_new = pc_new;
                 }
 
@@ -3024,27 +3024,27 @@ public class WeiboContent {
                     this.special_follow = special_follow;
                 }
 
-                public int getPlanet_video() {
+                public long getPlanet_video() {
                     return planet_video;
                 }
 
-                public void setPlanet_video(int planet_video) {
+                public void setPlanet_video(long planet_video) {
                     this.planet_video = planet_video;
                 }
 
-                public int getVideo_mark() {
+                public long getVideo_mark() {
                     return video_mark;
                 }
 
-                public void setVideo_mark(int video_mark) {
+                public void setVideo_mark(long video_mark) {
                     this.video_mark = video_mark;
                 }
 
-                public int getLive_status() {
+                public long getLive_status() {
                     return live_status;
                 }
 
-                public void setLive_status(int live_status) {
+                public void setLive_status(long live_status) {
                     this.live_status = live_status;
                 }
 
@@ -3112,23 +3112,23 @@ public class WeiboContent {
                  * display_text : 100万+
                  */
 
-                private int apply_scenario_flag;
-                private int display_text_min_number;
+                private long apply_scenario_flag;
+                private long display_text_min_number;
                 private String display_text;
 
-                public int getApply_scenario_flag() {
+                public long getApply_scenario_flag() {
                     return apply_scenario_flag;
                 }
 
-                public void setApply_scenario_flag(int apply_scenario_flag) {
+                public void setApply_scenario_flag(long apply_scenario_flag) {
                     this.apply_scenario_flag = apply_scenario_flag;
                 }
 
-                public int getDisplay_text_min_number() {
+                public long getDisplay_text_min_number() {
                     return display_text_min_number;
                 }
 
-                public void setDisplay_text_min_number(int display_text_min_number) {
+                public void setDisplay_text_min_number(long display_text_min_number) {
                     this.display_text_min_number = display_text_min_number;
                 }
 
@@ -3147,22 +3147,22 @@ public class WeiboContent {
                  * approval_comment_type : 0
                  */
 
-                private int comment_permission_type;
-                private int approval_comment_type;
+                private long comment_permission_type;
+                private long approval_comment_type;
 
-                public int getComment_permission_type() {
+                public long getComment_permission_type() {
                     return comment_permission_type;
                 }
 
-                public void setComment_permission_type(int comment_permission_type) {
+                public void setComment_permission_type(long comment_permission_type) {
                     this.comment_permission_type = comment_permission_type;
                 }
 
-                public int getApproval_comment_type() {
+                public long getApproval_comment_type() {
                     return approval_comment_type;
                 }
 
-                public void setApproval_comment_type(int approval_comment_type) {
+                public void setApproval_comment_type(long approval_comment_type) {
                     this.approval_comment_type = approval_comment_type;
                 }
             }

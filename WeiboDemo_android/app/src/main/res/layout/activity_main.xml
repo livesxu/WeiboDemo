@@ -7,6 +7,7 @@
     tools:context=".WeiboHome.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
         android:background="@color/colorAccent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="60dp"
