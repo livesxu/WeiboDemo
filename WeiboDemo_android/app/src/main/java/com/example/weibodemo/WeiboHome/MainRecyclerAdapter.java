@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.Rect;
+import android.provider.CalendarContract;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MainRecyclerAdapter extends RecyclerView.Adapter {
@@ -49,7 +52,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
         picWidth = (screenWidth - 4*picSpec)/3;
     }
 
-    class GridAdapter extends BaseAdapter {
+    class GridAdapter extends RecyclerView.Adapter {
 
         List<WeiboContent.StatusesBean.PicUrlsBean> images;
 
@@ -61,9 +64,51 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
             this.notifyDataSetChanged();
         }
 
-        @Override
-        public int getCount() {
+        class ImageHolder extends RecyclerView.ViewHolder {
 
+            public ImageHolder(@NonNull View itemView) {
+                super(itemView);
+            }
+        }
+
+        //onMeasure 返回widthMeasureSpec使宽高相等
+        class EqualImageView extends androidx.appcompat.widget.AppCompatImageView {
+
+            public EqualImageView(Context context) {
+                super(context);
+            }
+
+            @Override
+            protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+                super.onMeasure(widthMeasureSpec, widthMeasureSpec);
+            }
+        }
+
+        @NonNull
+        @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+            EqualImageView imageView = new EqualImageView(parent.getContext());
+            imageView.setBackgroundColor(Color.RED);
+            ConstraintLayout.LayoutParams layoutParams = new ConstraintLayout.LayoutParams(picWidth,0);
+            //对Recyclerview设置一些间距也可以直接在item里面设置，也可以recyclerView.addItemDecoration
+            layoutParams.leftMargin = picSpec;
+            layoutParams.bottomMargin = picSpec;
+            imageView.setLayoutParams(layoutParams);
+
+            return new ImageHolder(imageView);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+            EqualImageView equalImageView = (EqualImageView)holder.itemView;
+
+            Glide.with(equalImageView.getContext()).load(images.get(position).getThumbnail_pic()).centerCrop().transform(new RoundedCorners(10)).into(equalImageView);
+        }
+
+        @Override
+        public int getItemCount() {
             if (images == null) {
 
                 return 0;
@@ -73,39 +118,9 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
         }
 
         @Override
-        public Object getItem(int i) {
-            return null;
-        }
+        public long getItemId(int position) {
 
-        @Override
-        public long getItemId(int i) {
-            return i + indexGride;
-        }
-
-        @Override
-        public boolean hasStableIds() {
-            return true;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-
-            ImageView imageView;
-            if (view == null) {
-
-                imageView = new ImageView(viewGroup.getContext());
-                imageView.setBackgroundColor(Color.RED);
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(picWidth,picWidth);
-                imageView.setLayoutParams(layoutParams);
-
-            } else {
-
-                imageView = (ImageView)view;
-            }
-
-            Glide.with(viewGroup.getContext()).load(images.get(i).getThumbnail_pic()).centerCrop().transform(new RoundedCorners(8)).into(imageView);
-
-            return imageView;
+            return position + indexGride;
         }
     }
 
@@ -129,8 +144,35 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
 
         GridAdapter gridAdapter = new GridAdapter();
 
-        GridView gridView = view.findViewById(R.id.grid_images);
+        RecyclerView gridView = view.findViewById(R.id.grid_images);
+        gridView.setBackgroundColor(Color.GREEN);
+        gridView.setLayoutManager(new GridLayoutManager(parent.getContext(),3));
+        //todo: addItemDecoration 对RecyclerView的item进行布局优化!
+        gridView.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+//                super.getItemOffsets(outRect, view, parent, state);
 
+//                outRect.set(picSpec,0,0,picSpec);
+//                int childPosition = parent.getChildAdapterPosition(view);
+//                GridLayoutManager gridLayoutManager = (GridLayoutManager)parent.getLayoutManager();
+//                int spanCount = gridLayoutManager.getSpanCount();
+//                int itemCount = parent.getAdapter().getItemCount();
+//
+//                if (childPosition%spanCount == 0) {//最左边的那个
+//
+//                    outRect.set(picSpec,0,picSpec/2,picSpec);
+//                } else if (childPosition%spanCount == spanCount - 1) {//最右边的那个
+//
+//                    outRect.set(picSpec/2,0,picSpec,picSpec);
+//                } else {
+//
+//                    outRect.set(picSpec/2,0,picSpec/2,picSpec);
+//                }
+            }
+        });
+
+        gridAdapter.setHasStableIds(true);
         gridView.setAdapter(gridAdapter);
 
         return new ItemHolder(view,gridAdapter);
@@ -155,15 +197,6 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
         TextView textView = view.findViewById(R.id.text);
 
         textView.setText(statusesBean.getText());
-
-        GridView gridView = view.findViewById(R.id.grid_images);
-        if (statusesBean.getPic_urls().size() > 0) {
-
-            int line = (statusesBean.getPic_urls().size() - 1)/3 + 1;
-            gridView.getLayoutParams().height = line * (picWidth + picSpec);
-        } else {
-            gridView.getLayoutParams().height = 0;
-        }
 
         gridAdapter.indexGride = position * 1000;
         gridAdapter.setImages(statusesBean.getPic_urls());
