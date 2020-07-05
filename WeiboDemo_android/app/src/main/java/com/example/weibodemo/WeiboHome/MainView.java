@@ -4,7 +4,9 @@ import java.util.List;
 
 public interface MainView {
 
-    void refreshItems(List<WeiboContent.StatusesBean> statuses);
+    void refreshMainUser(WeiboContent.StatusesBean.UserBean user);
+
+    void refreshItems(List<WeiboContent.StatusesBean> statuses,int page);
 
     void toastError();
 }

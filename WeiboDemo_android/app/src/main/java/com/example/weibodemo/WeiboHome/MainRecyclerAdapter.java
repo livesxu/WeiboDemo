@@ -49,7 +49,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
         //因为设置图片宽度是以px为单位的，需要转换
         final float scale = activity.getResources().getDisplayMetrics().density;
         picSpec = (int)(scale*10 + 0.5f);
-        picWidth = (screenWidth - 4*picSpec)/3;
+        picWidth = (screenWidth - 2*picSpec)/3;
     }
 
     class GridAdapter extends RecyclerView.Adapter {
@@ -92,8 +92,8 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
             imageView.setBackgroundColor(Color.RED);
             ConstraintLayout.LayoutParams layoutParams = new ConstraintLayout.LayoutParams(picWidth,0);
             //对Recyclerview设置一些间距也可以直接在item里面设置，也可以recyclerView.addItemDecoration
-            layoutParams.leftMargin = picSpec;
-            layoutParams.bottomMargin = picSpec;
+//            layoutParams.leftMargin = picSpec;
+//            layoutParams.bottomMargin = picSpec;
             imageView.setLayoutParams(layoutParams);
 
             return new ImageHolder(imageView);
@@ -104,7 +104,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
 
             EqualImageView equalImageView = (EqualImageView)holder.itemView;
 
-            Glide.with(equalImageView.getContext()).load(images.get(position).getThumbnail_pic()).centerCrop().transform(new RoundedCorners(10)).into(equalImageView);
+            Glide.with(equalImageView.getContext()).load(images.get(position).getThumbnail_pic()).centerCrop().into(equalImageView);
         }
 
         @Override
@@ -148,12 +148,12 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
         gridView.setBackgroundColor(Color.GREEN);
         gridView.setLayoutManager(new GridLayoutManager(parent.getContext(),3));
         //todo: addItemDecoration 对RecyclerView的item进行布局优化!
-        gridView.addItemDecoration(new RecyclerView.ItemDecoration() {
-            @Override
-            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+//        gridView.addItemDecoration(new RecyclerView.ItemDecoration() {
+//            @Override
+//            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
 //                super.getItemOffsets(outRect, view, parent, state);
-
-//                outRect.set(picSpec,0,0,picSpec);
+//
+//                outRect.set(0,0,0,0);
 //                int childPosition = parent.getChildAdapterPosition(view);
 //                GridLayoutManager gridLayoutManager = (GridLayoutManager)parent.getLayoutManager();
 //                int spanCount = gridLayoutManager.getSpanCount();
@@ -169,8 +169,8 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter {
 //
 //                    outRect.set(picSpec/2,0,picSpec/2,picSpec);
 //                }
-            }
-        });
+//            }
+//        });
 
         gridAdapter.setHasStableIds(true);
         gridView.setAdapter(gridAdapter);

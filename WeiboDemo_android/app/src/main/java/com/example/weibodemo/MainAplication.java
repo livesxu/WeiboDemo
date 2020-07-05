@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.example.weibodemo.WeiboLogin.WeiboAccount;
 import com.example.weibodemo.WeiboLogin.WeiboDismissEvent;
+import com.example.weibodemo.WeiboLogin.WeiboInstallEvent;
 import com.example.weibodemo.WeiboLogin.WeiboLoginEvent;
 import com.google.gson.Gson;
 
@@ -76,6 +77,7 @@ public class MainAplication extends Application {
                             WeiboAccount.getInstance().setExpires_in(account.getExpires_in());
                             WeiboAccount.getInstance().setUid(account.getUid());
                             Log.v("weibo","flutter在SharedPreferences中存的值：" + map.toString());
+                            EventBus.getDefault().post(new WeiboInstallEvent(account.getAccess_token()));
                         } else {
                             Log.v("weibo","Native have not init access_token yet.");
                         }
